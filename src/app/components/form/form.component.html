@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="overlay">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="pay">
+            <p>
+              <strong class="top-strong">Try it free 7 days </strong>then $20/mo. thereafter
+            </p>
+          </div>
+          <div class="form">
+          <form autocomplete="off" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input placeholder="First Name" autocomplete="off" formControlName="firstName" [ngClass]="{'is-invalid' : submitted && registerForm.controls['firstName'].errors }" type="text" class="form-control">
+              <div *ngIf="submitted && registerForm.controls['firstName'].errors" class="text-danger error">
+                <div class="error" *ngIf="submitted && registerForm.controls['firstName'].errors['required']">
+                  First Name cannot be empty
+                </div>
+              </div>
+            </div>
+    
+            <div class="form-group">
+              <input placeholder="Last Name" formControlName="lastName" [ngClass]="{'is-invalid' : submitted && registerForm.controls['lastName'].errors }" type="text" class="form-control">
+              <div *ngIf="submitted && registerForm.controls['lastName'].errors" class="text-danger error">
+                <div class="error" *ngIf="submitted && registerForm.controls['lastName'].errors['required']">
+                  Last Name cannot be empty
+                </div>
+              </div>
+            </div>
+    
+            <div class="form-group">
+              <input placeholder="Email Address" formControlName="email" [ngClass]="{'is-invalid' : submitted && registerForm.controls['email'].errors }" type="email" class="form-control">
+             <div *ngIf="submitted && registerForm.controls['email'].errors" class="text-danger">
+              <div class="error" *ngIf="submitted  && registerForm.controls['email'].errors['required']">
+                Email Address cannot be empty
+              </div>
+              <div class="error" *ngIf="submitted && registerForm.controls['email'].errors['email']">
+                Looks like this is not an email
+              </div>
+    
+             </div>
+            </div>
+    
+            <div class="form-group">
+              <input id="input" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid' : submitted && registerForm.controls['password'].errors }" type="password" class="form-control">
+              <div *ngIf="submitted && registerForm.controls['password'].errors" class="text-danger">
+                <div class="error" *ngIf="submitted  && registerForm.controls['password'].errors['required']">
+                  Password cannot be empty
+                </div>
+                <div class="error" *ngIf="submitted && registerForm.controls['password'].errors['minlength']">
+                  Password Length should be minimum 3  
+                </div>
+      
+               </div>
+            </div>
+    
+            <div class="form-group">
+              <button class="btn btn-primary submit-btn">
+               CLAIM YOUR FREE TRIAL
+              </button>
+            </div>
+            <div class="para">
+               <p>
+                by clicking the button you are agreeing to our <strong class="bottom-strong">Terms and Services</strong>
+               </p>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>

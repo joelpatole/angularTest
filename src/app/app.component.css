@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+.main-container{
+    width: 100%;
+    height: 110vh;
+  position: relative;
+  background-image: url("../assets/bg-intro-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-color: hsl(0, 100%, 74%);
+}
+
+.detail{
+    display: flexbox;
+    width: 40%;
+    margin-left: 8%;
+    position: absolute;
+    margin-top: 20%;
+    color: white;
+}
+
+.detail h1{
+  font-weight: bolder;
+  font-family: 'Poppins', sans-serif;
+}
+
+.detail p{
+    font-family: 'Poppins', sans-serif;
+}
